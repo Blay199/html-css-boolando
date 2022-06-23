@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header {
+    background-color: rgb(255, 105, 0);
+    padding: 13px;
+}
+
+.filter {
+    align-items: center;
+    gap: 10px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.container a {
+    text-decoration: none;
+    color: white;
+}
+
+.logo {
+    margin: 0 auto;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.col-4 {
+    width: calc(100% / 3);
+    padding: 10px;
+}
+
+.card {
+    position: relative;
+}
+
+.card::after {
+    content: "";
+    display: block;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.card:hover::after {
+    background-color: rgba(0, 0, 0, 0.5) ;
+    transition: all 200ms ease-in-out;
+}
+
+.card--sale {
+    text-align: center;
+    font-size: xx-small;
+    width: 30px;
+    height: 15px;
+    padding: 2px;
+    color: white;
+    background-color: red;
+    position: absolute;
+    left: 0%;
+    bottom: 45px;
+    z-index: 10;    
+}
+
+.card--sostainability {
+    text-align: center;
+    font-size: xx-small;
+    height: 15px;
+    padding: 2px;
+    color: white;
+    left: 30px;
+    bottom: 45px;
+    background-color: green;
+    position: absolute;
+    z-index: 10;
+}
+
+.card--heart {
+    padding: 5px;
+    background-color: white;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 22px;
+    z-index: 10;
+}
+
+.card--heart::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.card--heart:hover::after {
+    color: red;
+}
+
+.card--heart:hover .like {
+    z-index: 10;
+}
+
+.brand {
+    font-size: 12px;
+}
+
+.sale-price {
+    color: red;
+    font-size: 15px;
+}
+
+.price {
+    color: black;
+    text-decoration: line-through;
+}
